@@ -73,7 +73,7 @@ export default function App() {
         onSubmit={(e) => { e.preventDefault(); searchCity() }}>
         <input value={city}
           onChange={(e) => setCity(e.target.value)}
-          placeholder="Enter a City"
+          placeholder="Enter a city"
           aria-label="City" />
         <button className="btn btn-primary" disabled={loading}>Search</button>
       </form>
@@ -84,7 +84,7 @@ export default function App() {
           <div className="alert alert-danger" role="alert">{error}</div>
         )}
         {weather && (
-          <section className="result"> <h2>{weather.name}, {weather.country}</h2>
+          <section className="result"><h2>{weather.name}, {weather.country}</h2>
             <p className="temp">{Math.round(weather.temperature)}°C</p>
             <p className="condition">{describe(weather.code)}</p>
             <dl className="details">
@@ -94,7 +94,7 @@ export default function App() {
               </div>
               <div>
                 <dt>Humidity</dt>
-                <dd> {Math.round(weather.humidity)}%</dd>
+                <dd>{Math.round(weather.humidity)}%</dd>
               </div>
               <div>
                 <dt>Wind</dt>
